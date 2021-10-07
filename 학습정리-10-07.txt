@@ -3,25 +3,82 @@
 1234 월 봄입니다.출력
 5678 월 여름입니다.출력
 9 10 11 12 월 겨울 입니다. 출력
-
+int month = 5;
+		
+		switch (month) {
+		case 1: case 2: case 3:case 4:
+			System.out.println("봄 입니다");
+			break;
+		case 5: case 6: case 7:case 8:
+			System.out.println("여름 입니다");
+			break;
+		case 9: case 10: case 11:case 12:
+			System.out.println("겨울 입니다");
+			break;
+		}
 2. 
 int num = -10 을 할당 후 해당 정수에 대한 절댓값을 출력하는 프로그램을 작성하시오.
 절대값은 양수 입니다.
+int num = -10;
+		
+		if(num < 0) {
+			System.out.println("절대값은 : "+ (num * -1));
+		}
 
 3. while 문과 do while 문의 차이는 무엇인가요?
+while은 조건이 참인 경우에만 문장을 실행하고 조건이 게속 참이라면 문장을 계속 실행한다 첫조건이 거짓일경운 while 문은 실행되지 않는다.
+do while은 조건이 거짓이더라도 적어도 한 번 문장은 실행한다. 이후 조건이 참/거짓인지의 여부에 따라 문장을 게속 실행할지를 결정한다
+
 4. 아래에서 for 문이 실행 되는 순서를 정리하시오.
 
 for (i = 1; i <= 1000; i++){
     sum = sum +i
 }
+i = 1;->i <= 1000;->sum = sum +i->i++
 
 5. 구구단 6단을 출력 하는 프로그램을 짜시오.
-6. 1부터 10000 까지의 합을 구하는 프로그램을 짜시오.
-7. 1부터 10000 까지의 숫자중 홀수 의 합을 구하는 프로그램을 짜시오.
-8. break 와 continue에 대하여 설명하시오.
+int dan = 6;
+		
+		for(int i = 1; i <= 9; i++) {
+			System.out.println(i + " * " + dan +" = " + (dan*i));
+		}
 
+6. 1부터 10000 까지의 합을 구하는 프로그램을 짜시오.
+int sum = 0;
+		
+		for(int i =1; i <= 10000; i++) 
+			sum += i;
+		System.out.println(sum);
+7. 1부터 10000 까지의 숫자중 홀수 의 합을 구하는 프로그램을 짜시오.
+int sum = 0;
+		
+		for(int i =1; i <= 10000; i++) {
+			if(i % 2 ==1) {
+				sum += i;
+			}
+		}
+		System.out.println(sum);
+8. break 와 continue에 대하여 설명하시오.
+break : 반복문 내부에서 break 키워드를 만나면 반복문이 강제 종료된다
+continue: 조건문 블록을 탈출하여 아래 명령문은 실행하지 않고, 다음 반복문 실행절차를 
 9. 1과 100 사이의 숫자중 5의 배수이자 7의 배수의 첫번재 수는(프로그램밍 하시오)
-10. 1과 10000 사이의 숫자중 5의 배수이자 7의 배수의 첫번재 수는(프로그램밍 하시오)
+for (int i = 1; i <= 100; i++) {
+			if ((i % 5) == 0 && (i % 7) == 0) {
+				System.out.println(i);
+				break;
+
+10. 1과 10000 사이의 숫자중 5의 배수이자 7의 배수인 수의 갯수는(프로그램밍 하시오)
+int count = 0;
+
+		for (int i = 1; i <= 10000; i++) {
+			if ((i % 5) != 0 || (i % 7) != 0) {
+				continue;
+
+			}
+			count++;
+		}
+		System.out.println(count);
+	}
 
 
 
